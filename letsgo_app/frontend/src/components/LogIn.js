@@ -39,9 +39,13 @@ const backgroundCss = {
 
 console.log(emailObj, passwordObj)
           return(
+            
         <div className="mainDiv">
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+        </style>
             <div className="videoBox">
-                <video
+                {/* <video
                   autoPlay
                   loop
                   id="background-video"
@@ -56,7 +60,7 @@ console.log(emailObj, passwordObj)
                   <source src={videoUrl} type="video/mp4" />
 
                   Your browser does not support the video tag.
-                </video>
+                </video> */}
       </div>
 
       <div className="leftDiv"> 
@@ -64,7 +68,7 @@ console.log(emailObj, passwordObj)
      <div className="logoForLogin">
 
       
-       <nav>
+       <nav className="createAccount">
          Don't have an account?
          <NavLink className="link" exact to={"/SignUp"}>
            {" "}
@@ -84,16 +88,11 @@ console.log(emailObj, passwordObj)
           <h3> [the(world) + (is)waiting]</h3>
     </div>
 
-            <form onSubmit={handleVerification}>
-                <label>E-Mail</label>
-                <br></br>
-                <input type="email" name={"email"} {...emailObj}   placeholder="email" />
-                <br></br>
-                <label>Password</label>
-                <br></br>
-                <input type="password" name={"password"} {...passwordObj} placeholder="password" />
-                <br></br>
-                <br></br>
+            <form onSubmit={handleVerification} className="formContainer">
+                <input type="email" name={"email"} {...emailObj}   placeholder="Email Address" />
+    
+                <input type="password" name={"password"} {...passwordObj} placeholder="Password" />
+
                 <button type="submit"> Log In</button>
             </form>
       </div>

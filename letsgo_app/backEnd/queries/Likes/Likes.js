@@ -9,9 +9,8 @@ const getPostLikes = async (req, res, next) =>{
             payload: allPostLikes
         })
     }catch(error){
-        console.log(error)
         res.status(400).json({
-            status: 'error',
+            status: error,
             message: 'could not retrieve all likes'
         })
     }
@@ -27,9 +26,8 @@ const addNewLike = async (req, res, next) =>{
         })
 
     }catch(error){
-        console.log(error)
         res.status(400).json({
-            status: 'error',
+            status: error,
             message: 'could not created the new like'
         })
     }
@@ -44,9 +42,9 @@ const deleteLike = async (req, res, next) =>{
             payload: deleteLike
         })
     }catch(error){
-        console.log(error)
+       
         res.status(400).json({
-            status: 'error',
+            status: error,
             message: 'could not delete like'
         })
     }
