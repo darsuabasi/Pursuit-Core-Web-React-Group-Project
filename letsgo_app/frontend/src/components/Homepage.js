@@ -10,8 +10,6 @@ import axios from 'axios';
 
 const Homepage = () =>{
     const [ posts, setPosts] = useState([]);
-    // const [ hashtags, setHashtags ] = useState([]);
-
     const fetchData = async (url) =>{
         try{
             let res = await axios.get(url);
@@ -60,8 +58,8 @@ return(
                        <SearchAutoComplete/>
                     </div>
                     <div className="allLinks">
-                        <NavLink className="link" exact to={"/upload"}>Upload</NavLink>
-                        <NavLink className="link" onClick={handleLogOut} exact to={"/"}>Log Out</NavLink>
+                        <NavLink className="upload" exact to={"/upload"}>Upload</NavLink>
+                        <NavLink className="logOut" onClick={handleLogOut} exact to={"/"}>Log Out</NavLink>
                     </div>
                 </nav>
         

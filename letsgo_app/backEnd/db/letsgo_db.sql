@@ -64,7 +64,7 @@ INSERT INTO Hashtags (poster_id, post_id, tag_name)
            (1, 1, 'Skyline'),
            (2, 2, 'RunnersHigh'),
            (2, 2, 'Grand Canyon'),
-           (3, 3, 'Lodon'),
+           (3, 3, 'London'),
            (3, 3, 'City'),
            (3, 3, 'Europe'),
            (4, 4, 'New York City'),

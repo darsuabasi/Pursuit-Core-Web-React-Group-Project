@@ -4,6 +4,7 @@ import { useInput } from "../util/useInput";
 import "../css/SignUp.css"
 import axios from "axios";
 
+
 const SignUp = () => {
   const username = useInput("");
   const email = useInput("");
@@ -83,32 +84,37 @@ const handleNewUser= async()=>{
   
     return(
         <div className="signUp">
+                <style>
+        @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+        </style>
             <nav>
                 Already have an account?
-                <NavLink className="link" exact to={"/login"}>Log In Here</NavLink>
+                <NavLink className="login" exact to={"/"}>Log In Here</NavLink>
             </nav>
             <div className="mainPage">
-                <img className="logo" src="../../assets/test2.png" alt="logo" width="90%" align="left" />
-                <p>Let's Go!</p>
-                <h1>Sign Up</h1>
-                <br/>
-                <form className="signUpForm" onSubmit={onUploadImage}>
-                    <label>
+                {/* <img className="logo" src="../../assets/test2.png" alt="logo" width="90%" align="left" /> */}
+                {/* <p>Let's Go!</p>
+                <h1>Sign Up</h1> */}
+                 <h1> Let's Go</h1>
+
+                <h3>Sign Up</h3>
+                <form className="signUpForm" onSubmit={onUploadImage} >
+                    {/* <label>
                         Username
-                        <input type="text" placeholder="JohnDoe" {...username} />
                     </label>
                     <label>
                         Email
-                        <input type="email" placeholder="JohnDoe@gmail.com" {...email} />
                     </label>
                     <label>
                         Password
-                        <input type="password" placeholder="aBc123!" {...password} />
                     </label>
                     <label>
                         Bio
-                        <input type="text" placeholder="Bio" {...bio} />
-                    </label>
+                    </label> */}
+                        <input type="text" placeholder="Username" {...username} />
+                        <input type="email" placeholder="Email Address" {...email} />
+                        <input type="password" placeholder="Password" {...password} />
+                        <input type="text" placeholder="Your Story...Bio" {...bio} />
                     <label>
                         Profile Picture
                         <input type="file" name="myImage" onChange={onSelectImage} />

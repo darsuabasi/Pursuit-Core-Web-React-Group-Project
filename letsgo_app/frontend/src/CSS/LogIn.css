@@ -9,7 +9,17 @@
   justify-content: center;
 }
 
+nav.createAccount{
+margin-right:2%
+} 
+nav.createAccount>.link{
+margin-top: 2%;
+margin-right:2%;
+padding: 1%;
+} 
+
 .logInForm{
+  margin-top: 10%;
   text-align: center;
   height: 100%;
   max-width: 300px;
@@ -41,19 +51,26 @@ button{
 }
 
 .letsGoDiv{
-  padding-bottom: 40px;
+  padding-bottom: 5%;
   font-family: "Cookie", cursive;
-  padding-bottom: -30px;
   color: teal;
 }
 
+.letsGoDiv >h1{
+  padding-left: 45%;
+  font-size:300%;
+}
+
 .theWorldDiv{
+  padding-top: -30%;
   padding-left: 50px;
   color: white;
 }
 .formContainer{
+  padding-top: 25%;
   font-size: 3rem;
 }
+
 .formContainer ::placeholder{
   position: absolute;
   top: 0px;
@@ -70,6 +87,9 @@ button{
   width: 100%;
   padding: 8px 0 5px 0;
   font-size: 16px;
+}
+.formContainer input::placeholder{
+  font-family: 'Baloo Da 2', cursive;
 }
 
 .formContainer input:focus{
