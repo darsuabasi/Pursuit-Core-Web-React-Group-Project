@@ -4,6 +4,8 @@ import axios from "axios"
 import '../css/Upload.css';
 import SearchAutoComplete from "./SearchAutoComplete"
 import { useInput } from '../util/useInput';
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Upload =()=> {
@@ -29,7 +31,7 @@ const Upload =()=> {
         // debugger
         if(res.data.status==="success"){
             SetImagePath(res.data.payload);
-            alert("Image is successfully uploaded")
+            toast("Image is successfully uploaded")
             setFile("")
         }else{
             alert(`${res.data.status.message}`)
@@ -64,7 +66,7 @@ const Upload =()=> {
         let newPost = await axios.post(`http://localhost:3005/posts/`,{poster_id:sessionStorage.loginedUser,imageURL:image,content:contentObj.value})
         console.log(newPost.data)
         handleNewHashTag(newPost.data.payload)
-        alert("new post created")
+        toast("new post created")
         setTimeout(function() {
         window.location = "../homepage";
         },1000) 
@@ -112,6 +114,8 @@ const Upload =()=> {
                 <button onClick={handleNewPost}>Post</button>
             </div>
             </div>
+        <ToastContainer/>
+
             </>
         )
 }

@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+
 import axios from "axios"
 
 const  UserInfo =()=> {
@@ -22,10 +25,10 @@ const  UserInfo =()=> {
         // debugger
         if(res.data.status==="success"){
             SetImagePath(res.data.payload);
-            alert("Image is successfully uploaded")
+            toast("Image is successfully uploaded")
             setFile("")
         }else{
-            alert(`${res.data.status.message}`)
+            toast(`${res.data.status.message}`)
         }
 
     }
@@ -74,7 +77,10 @@ const  UserInfo =()=> {
         console.log(image)
         let newPost = await axios.patch(`http://localhost:3005/users/${sessionStorage.loginedUser}`,{profilePic:image})
         if(newPost.data.status==="success"){
-            alert("User Profile has updated")
+            // alert("User Profile has updated")
+            setTimeout(function() {
+                window.location = "../homepage";
+            }) 
         }
     }
 
@@ -100,6 +106,8 @@ const  UserInfo =()=> {
         <br></br>
         <p>{user.bio}</p>
         {showUpload?(uploadForm()):null}
+        <ToastContainer/>
+
         </div> 
     )}
         return (
