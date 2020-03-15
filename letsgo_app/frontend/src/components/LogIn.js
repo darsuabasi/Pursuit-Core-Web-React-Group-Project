@@ -49,6 +49,7 @@ console.log(emailObj, passwordObj)
             <div className="videoBox">
                 <video
                   autoPlay
+                  muted
                   loop
                   id="background-video"
                   style={{ 

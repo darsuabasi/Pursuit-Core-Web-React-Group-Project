@@ -18,7 +18,7 @@ const PostImage = ({ filePath, userName, profilePic, postContent, postId }) => {
       <h4 className="userName">{userName}</h4>
       <img alt=" " src={profilePic} style={handleStyleProfile} />
 
-      <img alt={userName} src={filePath} style={handleStylePost} />
+      <img alt="" src={filePath} style={handleStylePost} />
       <Likes postId={postId}/>
       <p>{postContent}</p>
     </div>
