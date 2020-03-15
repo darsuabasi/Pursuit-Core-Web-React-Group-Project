@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { useInput } from "../util/useInput";
 import "../css/SignUp.css"
 import axios from "axios";
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const SignUp = () => {
@@ -29,7 +31,7 @@ const SignUp = () => {
     // debugger
     if(res.data.status==="success"){
         SetImagePath(res.data.payload);
-        alert("Image is successfully uploaded")
+        toast("Image is successfully uploaded")
         setFile("")
     }else{
         alert(`${res.data.status.message}`)
@@ -71,7 +73,7 @@ const handleNewUser= async()=>{
   
   if(newUser.data.status==="success"){
     sessionStorage.loginedUser=newUser.data.payload.id
-    alert("new user created")
+    toast("new user created")
     setTimeout(function() {
         window.location = "../homepage";
     },1000) 
@@ -123,6 +125,8 @@ const handleNewUser= async()=>{
                 </form>
                     <button onClick={handleNewUser}><span>Create Account</span></button>
             </div>
+        <ToastContainer/>
+
         </div>
     )
 }

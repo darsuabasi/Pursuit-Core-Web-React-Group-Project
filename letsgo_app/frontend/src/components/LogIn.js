@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import "../css/LogIn.css"
 import videoUrl from '../videoAssets/turkeyMonth.mp4';
 import { useInput } from '../util/useInput';
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Login =()=> {
@@ -20,8 +22,8 @@ const handleVerification = async (e) => {
         sessionStorage.loginedUser=res.data.payload.id
         setTimeout(function() {
             window.location = "../homepage";
-        }) 
-        alert("You were successfully logged in!") 
+        },3000) 
+        toast("You were successfully logged in!") 
     }  
     else {
         return (alert("Credentials not entered or you don't exist. Please head over to our sign up page."))
@@ -97,6 +99,8 @@ console.log(emailObj, passwordObj)
             </form>
       </div>
       </div>
+      <ToastContainer/>
+
     </div>
     )
    }
