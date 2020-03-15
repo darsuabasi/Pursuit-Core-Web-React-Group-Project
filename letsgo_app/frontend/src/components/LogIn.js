@@ -45,7 +45,7 @@ console.log(emailObj, passwordObj)
         @import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
         </style>
             <div className="videoBox">
-                {/* <video
+                <video
                   autoPlay
                   loop
                   id="background-video"
@@ -60,7 +60,7 @@ console.log(emailObj, passwordObj)
                   <source src={videoUrl} type="video/mp4" />
 
                   Your browser does not support the video tag.
-                </video> */}
+                </video>
       </div>
 
       <div className="leftDiv"> 
