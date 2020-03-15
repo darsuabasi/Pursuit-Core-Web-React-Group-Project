@@ -57,6 +57,9 @@ return(
                     <div className="form">
                        <SearchAutoComplete/>
                     </div>
+                    <div className="letsGoDiv"> 
+                    <h1>Let's Go</h1>
+                    </div>
                     <div className="allLinks">
                         <NavLink className="upload" exact to={"/upload"}>Upload</NavLink>
                         <NavLink className="logOut" onClick={handleLogOut} exact to={"/"}>Log Out</NavLink>
