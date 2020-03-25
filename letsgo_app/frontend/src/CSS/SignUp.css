@@ -1,0 +1,85 @@
+.signUp {
+    background-color: #F2DDC7;
+    background-image: url("./AdobeStock_173887445-1024x683.jpeg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    overflow: hidden;
+}
+
+.mainPage {
+    text-align: left;
+    margin: 5% 30% 10% 30%;
+    background: rgba(255,255,255,.7);
+    padding: 55px;
+    border-radius: 40px;
+}
+
+label {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+.login {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+.login:hover {
+    color: #AABCA4;
+}
+
+.login:visited {
+    color: #E99332;
+}
+
+nav {
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+
+button {
+    border: 2px solid #EBCBA8;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 1.5px 20px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #E99332;
+    color: white;
+}
+
+ div.mainPage > h1{
+    padding-left: 25%;
+    padding-bottom: 10%;
+    font-size: 200%;
+    font-family: "Cookie", cursive;
+    color: teal;
+}
+.signUpForm {
+    margin-top: 40px;
+}
+.signUpForm>input {
+    border: 0;
+    border-bottom: 1px solid white;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+}
+
+.signUpForm>input::placeholder{
+    font-family: 'Baloo Da 2', cursive;
+    color:teal
+}
+
